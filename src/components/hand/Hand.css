@@ -1,0 +1,30 @@
+.hand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Space between each hand section */
+  }
+  
+  .hand-label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 5px; /* Manage space between cards */
+  }
+  
+  /* If you want to display cards horizontally in mobile view */
+  @media (max-width: 480px) {
+    .cards {
+      overflow-x: auto;
+      gap: 3px; /* Adjust gap for mobile view */
+    }
+    
+    .card {
+      width: 60px;  /* Adjust according to desired size */
+      height: 90px;  /* Adjust according to desired size */
+    }
+  }
+  

@@ -1,0 +1,83 @@
+  .game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: black;
+    color: white;
+  }
+  
+  .title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .status {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .hands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .actions {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .actions button {
+      width: 100%;
+    }
+  }
+
+  /* Existing or new CSS for GameBoard */
+  .actions {
+    margin: 20px 0;
+  }
+  
+  button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  button.stand {
+    background-color: red; /* Green */
+  }
+
+  button.hit {
+    background-color: #4CAF50; /* Green */
+  }
+  
+  button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Additional spacing between buttons */
+  button + button {
+    margin-left: 20px;
+  }
+  
