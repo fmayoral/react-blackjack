@@ -3,10 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './app/App';
 import './axiosSetup';
+import keycloak from './keycloak';
+import { ReactKeycloakProvider } from '@react-keycloak/web';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ReactKeycloakProvider
+    authClient={keycloak}
+    initOptions={{
+      onLoad: 'login-required',
+      pkceMethod: 'S256',
+    }}
+  >
     <App />
-  </React.StrictMode>,
+  </ReactKeycloakProvider>,
   document.getElementById('root')
 );
